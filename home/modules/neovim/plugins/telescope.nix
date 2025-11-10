@@ -2,6 +2,7 @@
 
   programs.nixvim = {
     plugins = {
+      # dependencies
       trouble = {
         enable = true;
 
@@ -9,6 +10,9 @@
         use_diagnostic_signs = true;
         };
       };
+      web-devicons.enable = true;
+
+      # telescope
       telescope = {
         enable = true;
 

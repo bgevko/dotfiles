@@ -481,6 +481,12 @@
           end
         '';
       }
+      {
+        key = "<leader>U";
+        mode = "n";
+        action = "<cmd>UndotreeToggle<cr>";
+        options.desc = "Toggle undo tree";
+      }
     ];
   };
 }

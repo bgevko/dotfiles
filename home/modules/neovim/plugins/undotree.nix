@@ -1,7 +1,7 @@
-{pkgs, inputs,...}: 
+{pkg, inputs,...}: 
 {
   programs.nixvim.plugins = {
-    flash = {
+    undotree = {
       enable = true;
     };
   };

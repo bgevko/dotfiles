@@ -1,7 +1,7 @@
 {pkgs, inputs,...}: 
 {
   programs.nixvim.plugins = {
-    flash = {
+    git-conflict = {
       enable = true;
     };
   };

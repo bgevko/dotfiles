@@ -1,4 +1,4 @@
-{pkg, inputs,...}: 
+{pkgs, inputs,...}: 
 {
   imports = [
     ./noice.nix
@@ -10,5 +10,7 @@
     ./flash.nix
     ./grug-far.nix
     ./telescope.nix
+    ./undotree.nix
+    ./git-conflict.nix
   ];
 }
