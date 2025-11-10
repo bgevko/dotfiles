@@ -1,7 +1,7 @@
 {pkg, inputs,...}: 
 {
   programs.nixvim.plugins = {
-    noice = {
+    flash = {
       enable = true;
     };
   };

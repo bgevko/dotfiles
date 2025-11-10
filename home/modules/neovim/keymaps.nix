@@ -458,6 +458,29 @@
           desc = "Add Comment Above";
         };
       }
+      {
+        key = "<leader>s";
+        action.__raw = "require('flash').jump";
+        mode = "n";
+        options.desc = "Flash Search";
+      }
+      {
+        key = "<leader>sr";
+        mode = [ "n" "x" ];
+        options.desc = "Search and Replace";
+        action.__raw = ''
+          function()
+            local grug = require("grug-far")
+            local ext = vim.bo.buftype == "" and vim.fn.expand("%:e")
+            grug.open({
+              transient = true,
+              prefills = {
+                filesFilter = ext and ext ~= "" and "*." .. ext or nil,
+              },
+            })
+          end
+        '';
+      }
     ];
   };
 }

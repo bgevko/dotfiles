@@ -1,4 +1,4 @@
-{pkg, inputs,...}: 
+{pkgs, inputs,...}: 
 {
   programs.nixvim = {
     plugins = {
