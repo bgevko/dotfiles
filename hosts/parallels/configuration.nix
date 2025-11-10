@@ -38,6 +38,10 @@
     packages = with pkgs; [
     ];
   };
+  security.sudo = {
+    enable = true;
+    wheelNeedsPassword = false;
+  };
   programs.fish = {
     enable = true;
   };

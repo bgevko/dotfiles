@@ -17,6 +17,9 @@
     _1password-gui
     sops
     yamllint
+    tree
+    gcc
+    trash-cli
   ];
 
   home.sessionVariables = {};

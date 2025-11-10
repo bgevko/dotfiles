@@ -2,6 +2,10 @@
 {
   imports = [
     inputs.nixvim.homeModules.nixvim
+    ./auto_cmds.nix
+    ./opts.nix
+    ./keymaps.nix
+    ./plugins/_plugins.nix
   ];
   programs.nixvim = {
     enable = true;
@@ -9,36 +13,7 @@
     defaultEditor = true;
     viAlias = true;
     vimAlias = true;
-    opts = {
-      clipboard = "unnamedplus";
-      smartindent = true;
-      autoindent = true;
-      expandtab = true;
-      shiftwidth = 2;
-      tabstop = 2;
-      cursorline = true;
-      ignorecase = true;
-      smartcase = true;
-      linebreak = true;
-      number = true;
-      relativenumber = true;
-      ruler = false;
-      smoothscroll = true;
-      termguicolors = true;
-      undofile = true;
-      undolevels = 10000;
-      wrap = false;
-    };
-    globals = {
-      mapleader = " ";
-    };
     plugins = {
-      snacks = {
-        enable = true;
-        settings = {
-          explorer.enabled = true;
-        };
-      };
       copilot-cmp = {
         enable = true;
       };
@@ -54,16 +29,5 @@
         enable = true;
       };
     };
-    keymaps = [
-      {
-        mode = "n";
-        key = "<leader>e";
-        action = "<cmd>lua Snacks.explorer()<cr>";
-        options = {
-          desc = "Open Snacks File Explorer";
-          silent = true;
-        };
-      }
-    ];
   };
 }

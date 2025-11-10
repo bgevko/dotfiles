@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{pkgs, ...}: 
+{
+  imports = [
+    ./aliases.nix
+  ];
   programs.fish = {
     enable = true;
     interactiveShellInit = ''
