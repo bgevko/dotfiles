@@ -1,9 +1,14 @@
-{config, pkgs, inputs, ...}:
+{
+  config,
+  pkgs,
+  inputs,
+  ...
+}:
 {
   imports = [
     inputs.sops-nix.homeManagerModules.sops
   ];
-  
+
   sops = {
     defaultSopsFile = ../../secrets/secrets.yaml;
     defaultSopsFormat = "yaml";
@@ -26,7 +31,6 @@
       user.name = "bgevko";
       user.email = "bgevko@gmail.com";
       init.defaultBranch = "main";
-      credential.helper = "!gh auth git-credential";
     };
   };
 }

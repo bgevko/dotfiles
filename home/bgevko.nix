@@ -1,4 +1,9 @@
-{ config, pkgs, inputs,... }:
+{
+  config,
+  pkgs,
+  inputs,
+  ...
+}:
 {
   imports = [
     ./modules/auth.nix
@@ -8,7 +13,7 @@
   ];
   home.username = "bgevko";
   home.homeDirectory = "/home/bgevko";
-  home.stateVersion = "25.05"; 
+  home.stateVersion = "25.05";
 
   home.packages = with pkgs; [
     lazygit
@@ -20,10 +25,19 @@
     tree
     gcc
     trash-cli
+    hyprpicker
+    brave
   ];
 
-  home.sessionVariables = {};
+  # programs.qutebrowser = {
+  #   enable = true;
+  #   extraConfig = ''
+  #     c.scrolling.smooth = True
+  #     c.auto_save.session = True
+  #   '';
+  # };
 
+  home.sessionVariables = { };
 
   programs.home-manager.enable = true;
 }

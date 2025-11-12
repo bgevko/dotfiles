@@ -1,4 +1,4 @@
-{pkgs, inputs,...}: 
+{ pkgs, inputs, ... }:
 {
   imports = [
     ./noice.nix
@@ -12,5 +12,6 @@
     ./telescope.nix
     ./undotree.nix
     ./git-conflict.nix
+    ./colorizer.nix
   ];
 }

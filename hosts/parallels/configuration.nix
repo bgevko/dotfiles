@@ -1,13 +1,12 @@
 { config, pkgs, ... }:
 
 {
-  imports =
-    [ 
-      ./hardware-configuration.nix
-    ];
+  imports = [
+    ./hardware-configuration.nix
+  ];
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-  
+
   services.spice-vdagentd.enable = true;
   services.qemuGuest.enable = true;
 
@@ -34,7 +33,10 @@
   users.users.bgevko = {
     isNormalUser = true;
     description = "Bogdan";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+    ];
     packages = with pkgs; [
     ];
   };
@@ -62,6 +64,9 @@
     fd
     xclip
     wl-clipboard
+    waybar
+    hyprpaper
+    hyprpicker
   ];
 
   fonts.packages = with pkgs; [
